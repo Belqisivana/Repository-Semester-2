@@ -1,11 +1,11 @@
-public class Stack {
+public class StackBaru {
     public int size;
-    public String[] data;
+    public char[] data;
     public int top;
 
-    public Stack(int size) {
+    public StackBaru(int size){
         this.size = size;
-        this.data = new String[size];
+        this.data = new char[size];
         this.top = -1;
     }
 
@@ -17,32 +17,32 @@ public class Stack {
         return (top == size - 1);
     }
 
-    public void push(String dt) {
+    public void push (char dt) {
         if (!isFull()) {
             top++;
             data[top] = dt;
         } else {
-            System.out.println("Stack penuh!");
+            System.out.println("Stack penuh");
         }
     }
 
-    public String pop() {
+    public char pop() {
         if (!isEmpty()) {
-            String temp = data[top];
+            char temp = data[top];
             top--;
             return temp;
         } else {
-            System.out.println("Stack kosong!");
-            return null;
+            System.out.println("Stock kosong");
+            return '\0';
         }
     }
 
-    public String peek() {
+    public char peek() {
         if (!isEmpty()) {
             return data[top];
         } else {
             System.out.println("Stack kosong");
-            return null;
+            return '\0';
         }
     }
 
